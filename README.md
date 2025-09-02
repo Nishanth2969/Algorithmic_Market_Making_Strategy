@@ -152,7 +152,7 @@ Our backtesting shows:
 - Average position: 7.3 shares
 - Never exceeded risk limits
 
-**⚡ Activity**
+** Activity**
 - 840 successful trades
 - 7.9x inventory turnover
 - Active throughout simulation
