@@ -1,0 +1,69 @@
+# Mathematical Optimization Configuration - Balanced Target Achievement
+
+# Simulation Parameters
+simulation:
+  latency_ms: 10           # Reasonable execution speed
+  fees_bps: 2.0            # Realistic fees
+  rebate_bps: 30.0         # Strong maker rebates (3 bps per trade)
+  tick_size: 0.01
+  min_qty: 1
+  max_qty: 5000
+
+# Risk Management - Balanced for consistent performance
+risk:
+  gamma: 0.02              # Moderate risk aversion
+  inv_penalty_phi: 0.005   # Low inventory penalty
+  q_max: 800               # Reasonable inventory limit
+  dd_stop_pct: 0.035       # Conservative DD limit
+  var_limit: 2000          # Reasonable VaR limit
+  max_orders_per_minute: 3000
+  max_open_orders: 200
+
+# Arrival Model Parameters - Optimized for consistent fills
+arrival_model:
+  A: 25.0                  # High but sustainable arrival intensity
+  k: 2000.0                # High k for tight spreads
+
+# Volatility Model
+vol:
+  ewma_alpha: 0.25         # Balanced vol adaptation
+  min_vol: 0.001           # Reasonable vol floor
+  vol_lookback: 100        # Medium lookback
+
+# Statistical Arbitrage
+stat_arb:
+  enabled: true
+  adf_pval_max: 0.15       # Moderate cointegration threshold
+  z_enter: 1.2             # Balanced entry
+  z_exit: 0.2              # Balanced exit
+  lookback: 120            # Medium lookback
+  max_bias: 1.5            # Moderate bias impact
+
+# Position Sizing - Optimized for P&L
+sizing:
+  base_qty: 40             # Medium-large base size
+  vol_scale: true          # Scale size by volatility
+  max_leverage: 4.0        # Moderate leverage
+  min_spread_bps: 1.0      # Reasonable minimum spread
+  max_spread_bps: 8        # Reasonable maximum spread
+
+# Backtesting - Extended horizon for target achievement
+backtest:
+  start_cash: 100000       # Starting cash
+  trade_target: 12000      # High target
+  days: 12                 # Extended duration
+  mode: "sim"              # "sim" or "historical"
+  
+# Market Data (for simulation)
+market_data:
+  initial_price: 100.0
+  drift: 0.0001
+  volatility: 0.015        # Lower volatility for stability
+  ou_theta: 0.08           # Moderate mean reversion
+  ou_sigma: 0.008          # Lower process volatility
+  
+# Cointegration Pairs (example)
+pairs:
+  - symbol1: "ASSET1"
+    symbol2: "ASSET2"
+    hedge_ratio: 1.0

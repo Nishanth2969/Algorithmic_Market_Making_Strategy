@@ -1,0 +1,58 @@
+simulation:
+  latency_ms: 5
+  fees_bps: 1.0
+  rebate_bps: 500.0
+  tick_size: 0.01
+  min_qty: 1
+  max_qty: 2000
+
+risk:
+  gamma: 0.01
+  inv_penalty_phi: 0.01
+  q_max: 300
+  dd_stop_pct: 0.04
+  var_limit: 1000
+  max_orders_per_minute: 1000
+  max_open_orders: 50
+
+arrival_model:
+  A: 12.0
+  k: 1000.0
+
+vol:
+  ewma_alpha: 0.2
+  min_vol: 0.002
+  vol_lookback: 200
+
+stat_arb:
+  enabled: true
+  adf_pval_max: 0.1
+  z_enter: 1.8
+  z_exit: 0.5
+  lookback: 200
+  max_bias: 1.0
+
+sizing:
+  base_qty: 25
+  vol_scale: true
+  max_leverage: 3.0
+  min_spread_bps: 1.5
+  max_spread_bps: 12
+
+backtest:
+  start_cash: 100000
+  trade_target: 8000
+  days: 50
+  mode: "sim"
+  
+market_data:
+  initial_price: 100.0
+  drift: 0.0001
+  volatility: 0.02
+  ou_theta: 0.1
+  ou_sigma: 0.01
+  
+pairs:
+  - symbol1: "ASSET1"
+    symbol2: "ASSET2"
+    hedge_ratio: 1.0
