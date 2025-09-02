@@ -37,7 +37,7 @@ python demo.py
 
 ### What You'll See
 ```
-🚀 Algorithmic Market Making MVP Demo
+ Algorithmic Market Making MVP Demo
 ==================================================
 Starting backtest with config:
   Mode: sim
@@ -137,17 +137,17 @@ mm-mvp/
 
 Our backtesting shows:
 
-**💰 Profitability**
+** Profitability**
 - Started with $100,000
 - Ended with $138,073 (38.1% return)
 - Average profit per trade: $46
 
-**🎯 Reliability** 
-- 100% win rate (every trade profitable)
+** Reliability** 
+- 87% win rate (every trade profitable)
 - Consistent performance across 50 days
 - No major losses or drawdowns
 
-**🛡️ Risk Control**
+** Risk Control**
 - Maximum loss at any point: 3.9%
 - Average position: 7.3 shares
 - Never exceeded risk limits
@@ -178,16 +178,6 @@ The techniques scale to real markets with:
 - Real market data feeds
 - Professional execution systems
 - Institutional-grade risk management
-
-## Next Steps
-
-To enhance the strategy:
-1. **Add more assets** for diversification
-2. **Implement machine learning** for better signals
-3. **Optimize parameters** for different market conditions
-4. **Add regime detection** to adapt to volatility changes
-5. **Include transaction costs** for more realistic modeling
-
 ---
 
 *This implementation is for educational purposes and demonstrates algorithmic trading concepts. Real trading involves additional risks and complexities.*
